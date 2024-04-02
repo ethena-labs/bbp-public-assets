@@ -5,3 +5,5 @@ out/
 deployments
 
 broadcast
+
+.DS_Store
