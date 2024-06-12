@@ -44,9 +44,9 @@ The `minter` address is the only address that has the ability to mint USDe. This
 
 `EthenaMinting.sol` is the contract and address that the `minter` variable in `USDe.sol` points to. When users mint USDe with stETH (or other collateral) or redeems collateral for USDe, this contract is invoked.
 
-The primary functions used in this contract is `mint()` and `redeen()`. Users who call this contract are all within Ethena. When outside users wishes to mint or redeem, they perform an EIP712 signature based on an offchain price we provided to them. They sign the order and sends it back to Ethena's backend, where we run a series of checks and are the ones who take their signed order and put them on chain.
+The primary functions used in this contract is `mint()` and `redeem()`. Users who call this contract are all within Ethena. When outside users wishes to mint or redeem, they perform an EIP712 signature based on an offchain price we provided to them. They sign the order and sends it back to Ethena's backend, where we run a series of checks and are the ones who take their signed order and put them on chain.
 
-By design, Ethena will be the only ones calling `mint()`,`redeen()` and other functions in this contract.
+By design, Ethena will be the only ones calling `mint()`,` redeem()` and other functions in this contract.
 
 ### Minting
 
